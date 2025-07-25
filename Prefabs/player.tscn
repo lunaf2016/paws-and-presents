@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://7hf3u5ywcwp2"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_8ty1k"]
+[ext_resource type="PackedScene" uid="uid://bavg7v1670twn" path="res://Prefabs/The cat.tscn" id="2_ij0lw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwm0w"]
+size = Vector2(51, 48)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(505, 179)
+script = ExtResource("1_8ty1k")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_ij0lw")]
+frame_progress = 0.606326
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(49.5, 33)
+shape = SubResource("RectangleShape2D_uwm0w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpxti4q3l5o6t"]
+
+[ext_resource type="Texture2D" uid="uid://di7tvb648tlmh" path="res://assests/Grass for paws n presents.png" id="1_fdyhy"]
+[ext_resource type="Texture2D" uid="uid://bfl3o53glv3vo" path="res://assests/Groundstone.png" id="2_62l6q"]
+[ext_resource type="PackedScene" uid="uid://7hf3u5ywcwp2" path="res://Prefabs/player.tscn" id="3_kitjb"]
+[ext_resource type="PackedScene" uid="uid://buv0kubmotun0" path="res://Prefabs/stop sign.tscn" id="4_46hwf"]
+[ext_resource type="PackedScene" uid="uid://cxxna85b0redm" path="res://Prefabs/Nail.tscn" id="5_1djsf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpd7y"]
+texture = ExtResource("1_fdyhy")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tklgg"]
+texture = ExtResource("2_62l6q")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_4pm0i"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_tklgg")
+sources/0 = SubResource("TileSetAtlasSource_wpd7y")
+
+[node name="Level 1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4pm0i")
+format = 2
+layer_0/tile_data = PackedInt32Array(655369, 0, 0, 655371, 0, 1, 655372, 0, 1, 655373, 0, 2, 655374, 65536, 1, 655370, 0, 2, 655375, 65536, 1, 655376, 0, 2, 655368, 0, 1, 655377, 65536, 1, 655367, 0, 0, 655378, 65536, 1, 655379, 0, 2, 655366, 65536, 1, 655365, 0, 1, 655364, 0, 2, 655363, 0, 1, 655362, 0, 0, 655361, 2, 0, 655360, 2, 0, 655380, 0, 0, 655381, 0, 1, 655382, 0, 2, 655383, 65536, 1)
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_kitjb")]
+position = Vector2(445, 211)
+
+[node name="StopSign" parent="." instance=ExtResource("4_46hwf")]
+position = Vector2(-403, -153)
+
+[node name="Area2D" parent="." instance=ExtResource("5_1djsf")]
+position = Vector2(630, 309)
