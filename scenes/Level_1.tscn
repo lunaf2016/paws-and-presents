@@ -47,3 +47,5 @@ position = Vector2(-403, -153)
 
 [node name="Area2D" parent="." instance=ExtResource("5_1djsf")]
 position = Vector2(630, 309)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
