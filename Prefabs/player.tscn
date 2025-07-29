@@ -7,7 +7,7 @@
 size = Vector2(51, 48)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(505, 179)
+position = Vector2(517, 108)
 script = ExtResource("1_8ty1k")
 metadata/_edit_group_ = true
 
@@ -19,4 +19,4 @@ position = Vector2(49.5, 33)
 shape = SubResource("RectangleShape2D_uwm0w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
+position = Vector2(4, -57)
