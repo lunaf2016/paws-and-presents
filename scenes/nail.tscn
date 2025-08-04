@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqyrsn7aqe7nl"]
+
+[ext_resource type="PackedScene" uid="uid://cxxna85b0redm" path="res://Prefabs/Nail.tscn" id="1_sl71d"]
+
+[node name="Nail" instance=ExtResource("1_sl71d")]
