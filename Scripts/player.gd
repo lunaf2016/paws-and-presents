@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -450
 
 var start_position = Vector2(370,224)
 
+@onready var anim : AnimatedSprite2D = $AnimatedSprite2D
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Restart"):
 		respawn()
@@ -15,6 +17,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	else:
+		if abs(velocity.x) > 0:
+			anim.play("Idle")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
