@@ -11,9 +11,9 @@ position = Vector2(384, 260)
 
 [node name="Sprite2D" parent="." index="0"]
 material = SubResource("CanvasItemMaterial_ee2sq")
-position = Vector2(-5, 5)
-scale = Vector2(0.6875, 0.6875)
+position = Vector2(5.50001, -5)
+scale = Vector2(1.34375, 1.3125)
 
 [node name="CollisionShape2D" parent="." index="1"]
 material = SubResource("CanvasItemMaterial_vmxjb")
-position = Vector2(-5, 5.5)
+position = Vector2(5, -5.5)

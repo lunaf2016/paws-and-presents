@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh8ajsp4vkrbf"]
+
+[ext_resource type="Texture2D" uid="uid://b7hiv1xn8p8ym" path="res://assests/Cardboard.png" id="1_jks5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_homu6"]
+size = Vector2(21.0909, 24.4)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(285, 261)
+scale = Vector2(2.75, 2.5)
+texture = ExtResource("1_jks5p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0, 1.8)
+shape = SubResource("RectangleShape2D_homu6")
