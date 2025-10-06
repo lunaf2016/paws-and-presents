@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx03v33qse6jg"]
+
+[ext_resource type="Script" path="res://Scripts/dumpster.gd" id="1_i46nr"]
+[ext_resource type="Texture2D" uid="uid://bmdcvvb3hb8a" path="res://assests/Dumpster.png" id="1_pyi3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x68mv"]
+size = Vector2(87, 74)
+
+[node name="Dumpster" type="Area2D"]
+position = Vector2(53, 11)
+script = ExtResource("1_i46nr")
+
+[node name="Dumpster" type="Sprite2D" parent="."]
+position = Vector2(525, 191.5)
+scale = Vector2(2.5, 2.32813)
+texture = ExtResource("1_pyi3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(529.5, 219)
+shape = SubResource("RectangleShape2D_x68mv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
